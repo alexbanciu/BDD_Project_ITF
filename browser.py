@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-class Browser():
+class Browser:
     chrom = webdriver.Chrome(executable_path=ChromeDriverManager().install())
     chrom.maximize_window()
     chrom.get("https://www.ebay.com/")
