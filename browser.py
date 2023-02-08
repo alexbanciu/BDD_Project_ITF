@@ -6,7 +6,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 class Browser:
     chrom = webdriver.Chrome(executable_path=ChromeDriverManager().install())
     chrom.maximize_window()
-    chrom.get("https://www.ebay.com/")
     chrom.implicitly_wait(2)
 
     def close(self):
