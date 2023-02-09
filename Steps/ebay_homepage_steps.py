@@ -6,7 +6,7 @@ def step_impl(context):
     context.home_page_object.navigate_to_homepage()
 
 
-@when('Home page: I search for "{product_name}" from "{category_name}"')
+@when('Home page: I search for "{product_name}" from category "{category_name}"')
 def step_impl(context, product_name, category_name):
     context.home_page_object.insert_search_value(product_name)
     context.home_page_object.choose_category(category_name)
