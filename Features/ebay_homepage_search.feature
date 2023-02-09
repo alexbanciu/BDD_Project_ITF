@@ -11,20 +11,20 @@ Feature: Test the search functionality in the homepage of ebay
     @cell_phones
     Examples:
       | product_name | category_name             | nr_of_results |
-      | iphone       | Cell Phones & Accessories | 1300000       |
-      | samsung      | Cell Phones & Accessories | 1400000       |
+      | iphone       | Cell Phones & Accessories | 130000        |
+      | samsung      | Cell Phones & Accessories | 140000        |
 
     @electronics
     Examples:
       | product_name | category_name        | nr_of_results |
-      | TV           | Consumer Electronics | 120000        |
-      | LED          | Consumer Electronics | 32000         |
+      | TV           | Consumer Electronics | 12000         |
+      | LED          | Consumer Electronics | 3200          |
 
     @clothes
     Examples:
       | product_name | category_name                 | nr_of_results |
-      | dress        | Clothing, Shoes & Accessories | 410000        |
-      | sweater      | Clothing, Shoes & Accessories | 180000        |
+      | dress        | Clothing, Shoes & Accessories | 41000         |
+      | sweater      | Clothing, Shoes & Accessories | 18000         |
 
   @T2 @functional @BDD
   Scenario:  Check that the user can make an advanced search for a product
