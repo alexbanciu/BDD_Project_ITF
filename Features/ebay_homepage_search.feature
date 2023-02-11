@@ -38,4 +38,4 @@ Feature: Test the search functionality in the homepage of ebay
 
     Examples:
       | keyword_item | keyword_options          | excluded_words | category       | nr_of_results |
-      | snowboard    | Exact words, exact order | ski            | Sporting Goods | 1000            |
+      | snowboard    | Exact words, exact order | ski            | Sporting Goods | 1000          |
