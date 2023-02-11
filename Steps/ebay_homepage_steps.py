@@ -16,3 +16,8 @@ def step_impl(context, product_name, category_name):
 @then('Home page: I have at least "{nr_of_results}" results returned')
 def step_impl(context, nr_of_results):
     context.home_page_object.check_search_results(nr_of_results)
+
+
+@when("Home page: When I click on the advanced link")
+def step_impl(context):
+    context.home_page_object.click_advanced_link()

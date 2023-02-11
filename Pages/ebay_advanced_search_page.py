@@ -4,28 +4,25 @@ from Pages.base_page import BasePage
 
 
 class AdvancedSearchPage(BasePage):
-    ENTER_KEYWORDS_OR_ITEM_NUMBER = ()
-    KEYWORD_OPTIONS = ()
-    EXCLUDE_WORDS_FROM_SEARCH = ()
-    SEARCH_CATEGORIES = ()
-    SEARCH_BUTTON = ()
+    ENTER_KEYWORDS_OR_ITEM_NUMBER = (By.XPATH, '//*[@id="_nkw"]')
+    KEYWORD_OPTIONS = (By.XPATH, '//*[@id="s0-1-17-4[0]-7[1]-_in_kw"]')
+    EXCLUDE_WORDS_FROM_SEARCH = (By.XPATH, '//*[@id="_ex_kw"]')
+    SEARCH_CATEGORIES = (By.XPATH, '//*[@id="s0-1-17-4[0]-7[3]-_sacat"]')
+    SEARCH_BUTTON = (By.XPATH, '/html/body/div[3]/div/main/form/fieldset[1]/div[5]/button')
 
-    def enter_keywords_or_item_number(self):
-        pass
-        # TO BE IMPLEMENTED
+    def enter_keywords_or_item_number(self, keyword_item):
+        self.chrom.find_element(*self.ENTER_KEYWORDS_OR_ITEM_NUMBER).send_keys(keyword_item)
 
-    def select_keyword_options(self):
-        pass
-        # TO BE IMPLEMENTED
+    def select_keyword_options(self, keyword_option):
+        keyword_options_dropdown = Select(self.chrom.find_element(*self.KEYWORD_OPTIONS))
+        keyword_options_dropdown.select_by_visible_text(keyword_option)
 
-    def select_search_category(self):
-        pass
-        # TO BE IMPLEMENTED
+    def exclude_words_from_search(self, excluded_words):
+        self.chrom.find_element(*self.EXCLUDE_WORDS_FROM_SEARCH).send_keys(excluded_words)
 
-    def exclude_words_from_search(self):
-        pass
-        # TO BE IMPLEMENTED
+    def select_search_category(self, category):
+        category_dropdown = Select(self.chrom.find_element(*self.SEARCH_CATEGORIES))
+        category_dropdown.select_by_visible_text(category)
 
     def click_search_button(self):
-        pass
-        # TO BE IMPLEMENTED
+        self.chrom.find_element(*self.SEARCH_BUTTON).click()
