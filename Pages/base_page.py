@@ -12,5 +12,4 @@ class BasePage(Browser):
         self.chrom.find_element(*selector).click()
 
     def accept_cookies(self):
-        pass
-        # TO BE IMPLEMENTED
+        self.chrom.find_element(By.ID, '#gdpr-banner-accept').click()
